@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #d9dcd6;
+    color: #ffffff;
+}
+
+.myemailform {
+    border:3px; 
+    width: 60vh;
+    height:45vh;
+    border-style:solid; 
+    border-color:black;
+    margin:10px;
+    padding:20px;
+    color:black;
+    font-size: 20px;
+}
+.fa-user {
+    margin-right:10px;
+}
+.fa-phone{
+    margin-right:38px;
+}
+.fa-envelope-o {
+    margin-right:38px;
+}
+
+input[type=text] {
+    width: 40vh;
+    padding: 10px;
+    margin-bottom:10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+} 
+
+button {
+    color:black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0072bb;
+    font-size: 30px;
+}
+
+

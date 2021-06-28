@@ -1,0 +1,70 @@
+:root {
+    --textPink: rgb(193, 28, 214);
+    font-size: 100%;
+}
+ 
+#pinkColour {
+    color:var(--textPink);
+}
+
+h2{
+    color:var(--textPink);
+    font-size: 1.75em;
+}
+
+h3{
+    color:var(--textPink);
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.effects {
+    color: var(--textPink);
+    font-size: 80%;
+    font-style: italic;
+    animation-name: example;
+    animation-duration: 6s;
+}
+
+.columns {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    border: 2px solid var(--textPink);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+  
+.card-content {
+    background-color: #bfbfbd;
+    color: black;
+    font-weight: bold;
+    height: 100%;
+    width:100%;
+}
+.old-pic{
+    background-image: url(../images/house-black.jpg)
+}
+.new-pic{
+    background-image: url(../images/house-colour.png);
+}
+
+#heroImg{
+    height: 100vh; 
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: crosshair;
+}
+
+a:hover {
+    color:black;
+}
+
+@keyframes example {
+    from {background-color:yellow;}
+    to {background-color:green;}  
+}

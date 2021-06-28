@@ -1,0 +1,30 @@
+<section class="card is-full m-5" id="{{assignment_nav_id}}">
+    <div class="card-content">
+        <div class="media">
+            <div class="media-left ">
+                <figure class="image is-128x128">
+                    <a href="{{assignment_github_link}}" target="_html">
+                        <img src="{{assignment_img}}" alt="{{assignment_title}}" class="image is-128x128">
+                    </a>
+                </figure>
+            </div>
+            <div class="content is-medium">
+                <p></p>
+                <a href="{{assignment_deploy_link}}" class="is-size-5">
+                    <h2 id="pinkColour">{{assignment_title}} - Click to invoke application</h2>
+                </a>
+                <h3>{{assignment_text}}</h3>
+                <ul>
+                    {{#each items as | item |}}
+                    <li>{{item}}</li>
+                    {{/each}}
+                </ul>
+
+                <h4>Hover and click over the picture to view the GITHUB repository or click
+                    <a href="{{assignment_github_link}}" id="pinkColour" target="_html">here</a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</section>
+

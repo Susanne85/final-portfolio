@@ -1,0 +1,66 @@
+<section class="hero">
+    <div class="hero-body p-0">
+        <p class="title mx-5 is-inline">This is my Great Great Grandparents House.</p>
+        <p class="title mx-5 is-hidden-tablet">Click on and off the picture to change colours.</p>
+        <p class="title mx-5 is-inline is-hidden-mobile">Hover the mouse over the picture to change colours.</p>
+        <div class="card old-pic mx-5" id="heroImg"></div>
+    </div>
+</section>
+{{#each assignments as | assignment|}}
+{{> homepage-details items=(format_split assignment.assignment_list)}}
+{{/each}}
+
+<section class="card is-full m-5" id="aboutMe">
+    <div class="card-content">
+        <div class="media">
+            <div class="media-left">
+                <figure class="image is-128x128">
+                    <img src="images/myself.jpg" target="_html" alt="Me in China">
+                </figure>
+            </div>
+            <div class="content is-medium">
+                <h3>I love to create websites that are creative and meet the needs of my customers.</h3>
+                <p>I have learnt the basics of:</p>
+                <ul class="applicationsList">
+                    <li>HTML, CSS, javascript and Bulma as a CSS framework;</li>
+                    <li>Displaying images, use of the anchor tag to jump to an external website</li>
+                    <li>Web APIs</li>
+                    <li>APIs from third parties such as google and openweather</li>
+                    <li>Server processing - including encription of passwords, use of sequelize for undertaking database queries</li>
+                    <li>Client/Server applictions - to store application data in databases</li>
+                </ul>
+                <a href="https://susanne85.github.io/prework-about-me/" id="pinkColour" class="is-size-5" target="_html"
+                    alt="My information">More
+                    about
+                    Me</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="footer content is-medium has-background-link m-5 pb-5" id="contactDtls">
+    <h1 class="has-text-centered" id="pinkColour">Contact via Social Media</h1>
+    <div class="icon-text is-mobile is-justify-content-space-evenly">
+        <div class="icons">
+            <a href="https://www.facebook.com/susanne.bilney" class="has-text-white" target="_html" alt="FaceBook">
+                <i class="fab fa-facebook mr-1 "></i>Facebook</a>
+        </div>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/susanne-bilney-138696123" class="has-text-white" target="_html"
+                alt="Linkedin">
+                <i class="fab fa-linkedin mr-1 "></i>Linkedn</a>
+        </div>
+
+        <div class="icons">
+            <a href="https://www.twitter.com/BilneySusanne" target="_html" class="has-text-white" alt="Twitter"><i
+                    class="fab fa-twitter mr-1"></i>Twitter</a>
+        </div>
+        <div class="icons">
+            <a href="https://www.instagram.com/susannebilney2" target="_html" class="has-text-white" alt="Instagram">
+                <i class="fab fa-instagram mr-1"></i>Instagram</a>
+        </div>
+
+        <div class="icons">
+            <a href="./form.html" target="_html" class="has-text-white"><i class="far fa-envelope mr-5"></i>Email</a>
+        </div>
+    </div>
+</section>
