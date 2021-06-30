@@ -48,6 +48,8 @@ npm start
 
 ## Assets
 
+Live demo of the application hosted on Heroku: [Susannes Portfolio](https://susannes-portfolio.herokuapp.com/)
+
 The following images shows the functionality of the application: 
 
 ![Susanne's Portfolio](./public/images/susannesPortfolio.png)
