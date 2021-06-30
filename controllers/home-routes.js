@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Assignment } = require('../models');
 const readFile = require('fs');
-const path = require('path');
+
 const pdfparse = require('pdf-parse');
 console.log('starting home routes');
 
@@ -18,9 +18,9 @@ router.get('/', async (request, response) => {
       assignments,
       loggedIn: request.session.loggedIn
     });
-  } catch (err) {
-    console.log(err);
-    response.status(500).json(err);
+  } catch (error) {
+    console.log(error);
+    response.status(500).json(error);
   }
 });
 
@@ -42,18 +42,29 @@ router.get('/signup', async (request, response) => {
   response.render('signup');
 });
 
+router.get('/form', async (request, response) => {
+  console.log('Home Routes - form', request.url);
+  response.render('form');
+});
+
 router.get('/resume', async (request, response) => {
   console.log('Home Routes - resume');
-  const pdfFile = readFile.readFileSync('./public/docs/resume.pdf');
-   
-  pdfparse(pdfFile).then(function(data) {
-    const text = data.text;
-    response.render('resume', { text });
-  })
-  .catch (function(err) {
-    console.log('unable to retrieve pdf file', err);
-    response.status(500).json(err);
-  });
-}
-);
+
+  try {
+    const pdfFile = readFile.readFileSync('./public/docs/resume.pdf');
+
+    pdfparse(pdfFile).then(data => {
+      const text = data.text;
+      response.render('resume', { text })
+    })
+      .catch(error=> {
+        console.log('unable to retrieve pdf file', error);
+        response.status(500).json(error);
+      });
+  }
+  catch (error) {
+    console.log('unable to retrieve pdf file', error);
+    response.status(500).json(error);
+  };
+});
 module.exports = router;

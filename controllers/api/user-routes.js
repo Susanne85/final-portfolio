@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const writeFile = require('fs');
 
 // CREATE new user
 router.post('/', async (request, response) => {
@@ -71,4 +72,17 @@ router.post('/logout', (request, response) => {
   }
 });
 
+router.post('/download', (request, response) => {
+  console.log ('API Resume');
+
+  const resume = request.body.resume;
+  try {
+    const pdfWrite = writeFile.writeFileSync('./output/resume.pdf' , resume,'utf-8');
+    response.status(200).json({ message: 'PDF resume was been downloaed!' });
+  }
+  catch (error) {
+    res.status(500).json(error);
+  }
+ 
+});
 module.exports = router;

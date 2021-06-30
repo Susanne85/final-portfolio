@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/form.style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Email Form</title>
+</head>
+
+<body>
+    <div class="myemailform">
+        <h1>Customer Contact Details</h1>
+        <form method="POST" name="myform" action="./index.html">
+            <label for="fname"></label><i class="fa fa-user"></i>First name:</label>
+           
+            <input type="text" id="fname" name="fname" placeholder="First Name"><br>
+            <label for="lname"><i class="fa fa-user"></i>Last name:</label>
+            <input type="text" id="lname" name="lname" placeholder="Last Name" ><br><br>
+            <label for="phone" ><i class="fa fa-phone"></i>Phone:</label>
+            <input type="text" id="phone" name="phone" placeholder="Phone Number" ><br><br>
+            <label for="email" ><i class="fa fa-envelope-o"></i>Email:</label>
+            <input type="text" id="email" name="email" placeholder="email address"><br>
+            <br>
+            <button input type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
