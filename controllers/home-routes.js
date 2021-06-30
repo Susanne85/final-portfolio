@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { Assignment } = require('../models');
+const readFile = require('fs');
+const path = require('path');
+const pdfparse = require('pdf-parse');
 console.log('starting home routes');
+
 router.get('/', async (request, response) => {
   console.log('Home Routes - homepage', request.session.loggedIn);
   try {
@@ -38,4 +42,18 @@ router.get('/signup', async (request, response) => {
   response.render('signup');
 });
 
+router.get('/resume', async (request, response) => {
+  console.log('Home Routes - resume');
+  const pdfFile = readFile.readFileSync('./public/docs/resume.pdf');
+   
+  pdfparse(pdfFile).then(function(data) {
+    const text = data.text;
+    response.render('resume', { text });
+  })
+  .catch (function(err) {
+    console.log('unable to retrieve pdf file', err);
+    response.status(500).json(err);
+  });
+}
+);
 module.exports = router;
