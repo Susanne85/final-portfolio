@@ -12,9 +12,9 @@
 </head>
 
 <body>
-  <header class="content is-medium has-background-link  mx-5 mb-5">
+  <header id="portfolioTop" class="content is-medium has-background-link  mx-5 mb-5">
     <h1 class="has-text-centered pt-5" id="pinkColour">Susanne's Portfolio</h1>
-    <h2 class="has-text-white has-text-centered mb-4 pb-4">Want a website with a bit of <span
+    <h2 class="has-text-dark has-text-weight-medium has-text-centered mb-4 pb-4">Want a website with a bit of <span
         class="effects">difference</span> and <span class="effects">flair.</span>
     </h2>
 
@@ -31,30 +31,30 @@
 
       <div id="navbarPortfolio" class="navbar-menu content is-large has-background-link">
         <div class="navbar-start">
-          <a class="navbar-item" id="navbar-item" href="/#Home" target="_top">
+          <a class="navbar-item has-text-dark has-text-weight-medium" id="navbar-item" href="/#Home">
             Home
           </a>
-          <a class="navbar-item" id="navbar-item" href="/#aboutMe" target="_top">
+          <a class="navbar-item has-text-dark has-text-weight-medium" id="navbar-item" href="/#aboutMe">
             About Me
           </a>
 
-          <a class="navbar-item" id="navbar-item" href="/#contactDtls" target="_top">
+          <a class="navbar-item has-text-dark has-text-weight-medium" id="navbar-item" href="/#contactDtls">
             Contact
           </a>
           
-          <div class="navbar-item has-dropdown is-hoverable " target="_top">
-            <a class="navbar-link">
+          <div class="navbar-item has-dropdown is-hoverable ">
+            <a class="navbar-link has-text-dark has-text-weight-medium">
               Portfolio
             </a>
 
             <div class="navbar-dropdown">
-              <a href="/#weatherForecast" class="dropdown-item" target="_top">
+              <a href="/#weatherForecast" class="dropdown-item has-text-black has-text-weight-medium">
                 Weather Forecast
               </a>
-              <a href="/#techBlog" class="dropdown-item" target="_top">
+              <a href="/#techBlog" class="dropdown-item has-text-black has-text-weight-medium">
                 Tech Blog
               </a>
-              <a href="/#easyAppointmentTracker" class="dropdown-item" target="_top">
+              <a href="/#easyAppointmentTracker" class="dropdown-item has-text-black has-text-weight-medium">
                 Easee Appointment Tracker
               </a>
             </div>
@@ -62,7 +62,7 @@
           {{#if loggedIn}}
           <button class="is-size-4 has-background-link" id="logout">Logout</button>
           {{else}}
-          <a class="navbar-item" href="/login">Login</a>
+          <a class="navbar-item has-text-dark has-text-weight-medium" href="/login">Login</a>
           {{/if}}
         </div>
       </div>
